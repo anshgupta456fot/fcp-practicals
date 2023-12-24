@@ -3,24 +3,26 @@
 
 int main(void)
 {
-    
-    int a[3][3],b[3][3],i,j,c[3][3];
+    int m;
+    printf("enter the value of order of the square matrix");
+    scanf("%d",&m);
+    int a[m][m],b[m][m],i,j,c[m][m];
     // taking values of matrix a
     printf("enter values for first matrix\n");
-    for(int l=0; l<3;l ++)
+    for(int l=0; l<m;l ++)
     {
-        for(int m=0;m<3;m++)
+        for(int s=0;s<m;s++)
         {
-            printf("Enter Element at %d%d position: ",l+1,m+1);
-            scanf("%d",&a[l][m]);
+            printf("Enter Element at %d%d position: ",l+1,s+1);
+            scanf("%d",&a[l][s]);
         }
     }
     printf("\n");
     //taking values of matrix b
     printf("Now enter values for second matrix\n");
-    for(i=0;i<3;i++)
+    for(i=0;i<m;i++)
     {
-        for(j=0;j<3;j++)
+        for(j=0;j<m;j++)
         {
             printf("Enter Element at %d%d position: ",i+1,j+1);
             scanf("%d",&b[i][j]);
@@ -28,34 +30,34 @@ int main(void)
     }
     printf("\n");
     //printing value of matrix a 
-    for(i=0;i<3;i++)
+    for(i=0;i<m;i++)
     {
-        for(j=0;j<3;j++)
+        for(j=0;j<m;j++)
         {
-            printf(" %d ",a[i][j]);
+            printf("\t%d\t",a[i][j]);
         }
         printf("\n");
     }
     printf("\n\n");
     //printing values of matrix b
-    for(i=0;i<3;i++)
+    for(i=0;i<m;i++)
     {
-        for(j=0;j<3;j++)
+        for(j=0;j<m;j++)
         {
-            printf(" %d ",b[i][j]);
+            printf("\t%d\t",b[i][j]);
         }
         printf("\n");
     }
     printf("\n\n Sum of both matrix is:\n");
     // adding these two matrix
-    for(i=0;i<3;i++)
+    for(i=0;i<m;i++)
     {
-        for(j=0;j<3;j++)
+        for(j=0;j<m;j++)
         {
             //adding the 2 matrix and storing it in matrix c
             c[i][j]=a[i][j]+b[i][j];
             //printing values of matrix c
-            printf(" %d ",c[i][j]);
+            printf("\t%d\t",c[i][j]);
         }
         printf("\n");
     }
